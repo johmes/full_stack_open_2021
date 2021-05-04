@@ -1,0 +1,16 @@
+title Spa sivulle meneminen
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->client: HTTP-koodi
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->client: main.css
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->client: spa.js
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->client: data.json
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/favicon.ico
+server-->client: favicon.ico

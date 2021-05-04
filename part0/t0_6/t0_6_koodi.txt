@@ -1,0 +1,12 @@
+title Muistiinpanon luonti spa sivulle
+
+note over client:
+Läheteään uusi muistiinpano 
+JSON-muodossa palvelimelle.
+end note
+client->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->client: HTTP-Status Code: 201
+note over client:
+Palvelin vastaa 201 created statuskoodilla.
+Muita HTTP-pyyntöjä ei enää suoriteta.
+end note
