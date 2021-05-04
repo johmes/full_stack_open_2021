@@ -1,0 +1,27 @@
+title Muistiinpanon luonti sivulle
+
+client->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server-->client: HTTP-Status Code: 302
+note over client:
+Palvelin vastaa uudelleenohjaus statuskoodilla, 
+jonka jälkeen sivu ladataan uudelleen ja mm. 
+pyydetään data.json tiedostoa palvelimelta.
+end note
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->client: HTML-koodi
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->client: main.css
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->client: main.js
+
+note over client:
+Selain suorittaa js-koodin ja se 
+pyytää JSON-tiedoston palvelimelta
+end note
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->client: [{ content: "esimerkki json", date: "2021-05-04" }, ...]
+
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+server-->client: favicon.ico
